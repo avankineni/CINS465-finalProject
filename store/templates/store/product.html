@@ -1,0 +1,27 @@
+{% extends 'store/main.html' %}
+{% load static %}
+{% block content %}
+<html>
+<head>
+<style>
+input[type=text] {
+  width: 100%;
+  padding: 12px 20px;
+  margin: 8px 0;
+  box-sizing: border-box;
+}
+</style>
+</head>
+<body>
+
+<h2>Add a Product to ChicoExchange!</h2>
+
+<form action=" " method="post" enctype="multipart/form-data">
+  {% csrf_token %}
+  {{form.as_p}}
+  <input type="submit" value="Submit">
+</form>
+
+</body>
+</html>
+{% endblock content %}
