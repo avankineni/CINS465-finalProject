@@ -56,10 +56,8 @@ def checkout(request):
     return render(request, 'store/checkout.html', context)
 
 
-def room(request, room_name):
-    return render(request, 'store/room.html', {
-        'room_name': room_name
-    })
+def room(request):
+    return render(request, 'store/room.html')
 
 def product(request):
 #if request.POST.get('pname') and request.POST.get('price') and request.POST.get('pdescription') and (request.POST.get('digital') or request.POST.get('notdigital')) and request.POST.get('pimage'):
